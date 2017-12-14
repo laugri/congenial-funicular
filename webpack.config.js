@@ -11,4 +11,8 @@ module.exports = {
     path: paths.output,
     filename: 'bundle.js',
   },
+  devServer: {
+    contentBase: paths.source,
+    port: 3000,
+  },
 };
