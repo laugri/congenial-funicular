@@ -1,5 +1,4 @@
 const path = require('path');
-// const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const paths = {
@@ -14,15 +13,7 @@ const config = {
     filename: 'bundle.js',
   },
   devtool: 'cheap-module-eval-source-map',
-  devServer: {
-    contentBase: paths.source,
-    // hot: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    // new webpack.NamedModulesPlugin(),
-    // new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new HtmlWebpackPlugin()],
   module: {
     rules: [
       {
