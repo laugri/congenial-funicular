@@ -1,3 +1,10 @@
-import printMe from './print.js';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-printMe();
+class App extends Component {
+  render() {
+    return <div>Hello from react</div>;
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

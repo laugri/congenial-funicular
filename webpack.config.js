@@ -13,7 +13,11 @@ const config = {
     filename: 'bundle.js',
   },
   devtool: 'cheap-module-eval-source-map',
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(paths.source, 'index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -22,7 +26,7 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env'],
+            presets: [['babel-preset-env'], ['react']],
           },
         },
       },
